@@ -37,18 +37,18 @@ public class AuthenticationEndpoint {
                 true,   // Secure (true if served over HTTPS)
                 true    // HTTP-only (prevents access from JavaScript)
         );
-        
+
         return Response.ok("Login successful").cookie(cookie).header("Authorization", "Bearer " + jwtToken).build();
     }
 
     @GET
     @Path("/validate")
-    public String validateToken(@HeaderParam("Authorization") String token) {
-        if (authService.validateToken(token)) {
-            Claims claims = authService.extractClaims(token);
-            return "Token is valid for user: " + claims.getSubject();
-        } else {
-            return "Invalid token";
+    public Response validateToken(@HeaderParam("Authorization") String token) {
+        if (!authService.validateToken(token)) {
+            return Response.status(Response.Status.UNAUTHORIZED).entity("Token invalid").build();
         }
+        
+        Claims claims = authService.extractClaims(token);
+        return Response.ok("Token is valid for user: " + claims.getSubject()).build();
     }
 }

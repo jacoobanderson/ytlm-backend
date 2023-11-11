@@ -9,11 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7738b6ed-2108-409f-880f-c087445e2821" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytlm/endpoints/AuthenticationEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytlm/endpoints/AuthenticationEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytlm/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytlm/services/AuthenticationService.java" afterDir="false" />
-    </list>
+    <list default="true" id="7738b6ed-2108-409f-880f-c087445e2821" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,7 +147,7 @@
       <updated>1699719869557</updated>
       <workItem from="1699719870710" duration="640000" />
       <workItem from="1699720519874" duration="1020000" />
-      <workItem from="1699721645380" duration="7034000" />
+      <workItem from="1699721645380" duration="7341000" />
     </task>
     <servers />
   </component>
