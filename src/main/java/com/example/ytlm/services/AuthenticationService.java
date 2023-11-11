@@ -39,9 +39,8 @@ public class AuthenticationService {
 
         if (user != null && passwordHash.verifyPassword(password, user.getPassword())) {
             return generateJwtToken(user.getEmail());
-        } else {
-            throw new RuntimeException("Invalid credentials");
         }
+        return null;
     }
 
     public boolean validateToken(String token) {
@@ -66,4 +65,4 @@ public class AuthenticationService {
                 .compact();
     }
 }
-}
+
