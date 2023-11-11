@@ -2,13 +2,15 @@ package com.example.ytlm.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Objects;
+
 @Entity
-@Table(name = "users", schema = "learn", catalog = "ytlm")
-public class UsersEntity {
+@Table(name = "user", schema = "learn", catalog = "ytlm")
+public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")
-    private int id;
+    private Long id;
     @Basic
     @Column(name = "email")
     private String email;
@@ -16,11 +18,11 @@ public class UsersEntity {
     @Column(name = "password")
     private String password;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -45,18 +47,16 @@ public class UsersEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        UsersEntity that = (UsersEntity) o;
+        UserEntity that = (UserEntity) o;
 
-        if (id != that.id) return false;
-        if (email != null ? !email.equals(that.email) : that.email != null) return false;
-        if (password != null ? !password.equals(that.password) : that.password != null) return false;
-
-        return true;
+        if (!Objects.equals(id, that.id)) return false;
+        if (!Objects.equals(email, that.email)) return false;
+        return Objects.equals(password, that.password);
     }
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = Math.toIntExact(id);
         result = 31 * result + (email != null ? email.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         return result;

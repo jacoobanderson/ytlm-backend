@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.49">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>813</IntrospectionStateNumber>
+      <IntrospectionStateNumber>816</IntrospectionStateNumber>
       <ServerVersion>16.0</ServerVersion>
       <StartupTime>1697900999</StartupTime>
       <TimeZones>true ACDT
@@ -806,7 +806,7 @@ false Zulu
 13452||10|C|G
 13452||-9223372036854775808|U|G
 13452||10|U|G</Grants>
-      <IntrospectionStateNumber>813</IntrospectionStateNumber>
+      <IntrospectionStateNumber>816</IntrospectionStateNumber>
       <ObjectId>16583</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4714,9 +4714,9 @@ false Zulu
       <OwnerName>postgres</OwnerName>
     </schema>
     <schema id="263" parent="3" name="learn">
-      <IntrospectionStateNumber>813</IntrospectionStateNumber>
-      <IntrospectionTimestamp>2023-11-11.18:37:54.531</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-11-11.17:37:54</LocalIntrospectionTimestamp>
+      <IntrospectionStateNumber>816</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2023-11-11.18:45:00.521</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-11-11.17:45:00</LocalIntrospectionTimestamp>
       <ObjectId>16584</ObjectId>
       <StateNumber>771</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -5956,9 +5956,9 @@ false Zulu
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="271" parent="263" name="users">
+    <table id="271" parent="263" name="user">
       <ObjectId>16660</ObjectId>
-      <StateNumber>812</StateNumber>
+      <StateNumber>815</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -6092,14 +6092,12 @@ false Zulu
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
     <key id="288" parent="271" name="users_pkey">
-      <NameSurrogate>1</NameSurrogate>
       <ObjectId>16667</ObjectId>
       <Primary>1</Primary>
       <StateNumber>812</StateNumber>
       <UnderlyingIndexId>16666</UnderlyingIndexId>
     </key>
     <key id="289" parent="271" name="users_email_key">
-      <NameSurrogate>1</NameSurrogate>
       <ObjectId>16669</ObjectId>
       <StateNumber>812</StateNumber>
       <UnderlyingIndexId>16668</UnderlyingIndexId>
