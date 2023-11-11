@@ -1,5 +1,7 @@
 package com.example.ytlm.endpoints;
 
+import com.example.ytlm.requestbodies.LoginRequest;
+import com.example.ytlm.requestbodies.RegisterRequest;
 import com.example.ytlm.services.AuthenticationService;
 import io.jsonwebtoken.Claims;
 import jakarta.inject.Inject;
@@ -14,14 +16,14 @@ public class AuthenticationEndpoint {
 
     @POST
     @Path("/register")
-    public void register() {
-        authService.register(email, password);
+    public void register(RegisterRequest registerBody) {
+        authService.register(registerBody.getEmail(), registerBody.getPassword());
     }
 
     @POST
     @Path("/login")
-    public Response login() {
-        String jwtToken = authService.login(email, password);
+    public Response login(LoginRequest loginBody) {
+        String jwtToken = authService.login(loginBody.getEmail(), loginBody.getPassword());
 
         if (jwtToken == null) {
             return Response.status(Response.Status.UNAUTHORIZED).entity("Invalid Credentials").build();
