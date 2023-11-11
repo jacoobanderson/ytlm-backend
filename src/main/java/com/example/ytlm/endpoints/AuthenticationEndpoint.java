@@ -47,7 +47,7 @@ public class AuthenticationEndpoint {
         if (!authService.validateToken(token)) {
             return Response.status(Response.Status.UNAUTHORIZED).entity("Token invalid").build();
         }
-        
+
         Claims claims = authService.extractClaims(token);
         return Response.ok("Token is valid for user: " + claims.getSubject()).build();
     }
