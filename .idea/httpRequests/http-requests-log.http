@@ -1,0 +1,187 @@
+POST http://localhost:8080/ytlm-1.0-SNAPSHOT/api/auth/login
+Content-Type: application/json
+Content-Length: 42
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: jwt=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJoZWoiLCJpYXQiOjE2OTk3MzA1NzMsImV4cCI6MTcwMDU5NDU3M30.SGt1FNpD3rambdKfuh4nWqD-JDwF03FcJae7p6unFnjEDednMX0YsmDP1vkJsjWUmBp5lmW77HctAprh1o009g
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "hej",
+  "password": "hej1"
+}
+
+<> 2023-11-11T202301.401.octet-stream
+
+###
+
+POST http://localhost:8080/ytlm-1.0-SNAPSHOT/api/auth/login
+Content-Type: application/json
+Content-Length: 41
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "hej",
+  "password": "hej"
+}
+
+<> 2023-11-11T202253.200.octet-stream
+
+###
+
+POST http://localhost:8080/ytlm-1.0-SNAPSHOT/api/auth/login
+Content-Type: application/json
+Content-Length: 41
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "hej",
+  "password": "hej"
+}
+
+<> 2023-11-11T202027.500.octet-stream
+
+###
+
+POST http://localhost:8080/ytlm-1.0-SNAPSHOT/api/auth/login
+Content-Type: application/json
+Content-Length: 41
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "hej",
+  "password": "hej"
+}
+
+<> 2023-11-11T201632.500.octet-stream
+
+###
+
+POST http://localhost:8080/ytlm-1.0-SNAPSHOT/api/auth/login
+Content-Type: application/json
+Content-Length: 41
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "hej",
+  "password": "hej"
+}
+
+<> 2023-11-11T201452.500.octet-stream
+
+###
+
+POST http://localhost:8080/ytlm-1.0-SNAPSHOT/api/auth/login
+Content-Type: application/json
+Content-Length: 41
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "hej",
+  "password": "hej"
+}
+
+<> 2023-11-11T201212.500.octet-stream
+
+###
+
+POST http://localhost:8080/ytlm-1.0-SNAPSHOT/api/auth/login
+Content-Type: application/json
+Content-Length: 41
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "hej",
+  "password": "hej"
+}
+
+<> 2023-11-11T201138.500.octet-stream
+
+###
+
+POST http://localhost:8080/ytlm-1.0-SNAPSHOT/api/auth/login
+Content-Type: application/json
+Content-Length: 41
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "hej",
+  "password": "hej"
+}
+
+<> 2023-11-11T201120.500.octet-stream
+
+###
+
+POST http://localhost:8080/ytlm-1.0-SNAPSHOT/api/auth/register
+Content-Type: application/json
+Content-Length: 41
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "hej",
+  "password": "hej"
+}
+
+###
+
+POST http://localhost:8080/ytlm-1.0-SNAPSHOT/api/auth/register
+Content-Type: application/json
+Content-Length: 41
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "hej",
+  "password": "hej"
+}
+
+<> 2023-11-11T200739.500.octet-stream
+
+###
+
+POST http://localhost:8080/ytlm-1.0-SNAPSHOT/api/auth/register
+Content-Length: 41
+Content-Type: */*; charset=UTF-8
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "hej",
+  "password": "hej"
+}
+
+###
+
+POST http://localhost:8080/ytlm-1.0-SNAPSHOT/api/auth/register
+Content-Length: 41
+Content-Type: */*; charset=UTF-8
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "hej",
+  "password": "hej"
+}
+
+###
+

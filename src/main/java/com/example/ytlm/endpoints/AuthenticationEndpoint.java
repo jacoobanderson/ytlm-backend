@@ -6,6 +6,7 @@ import com.example.ytlm.services.AuthenticationService;
 import io.jsonwebtoken.Claims;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.NewCookie;
 import jakarta.ws.rs.core.Response;
 
@@ -16,12 +17,14 @@ public class AuthenticationEndpoint {
 
     @POST
     @Path("/register")
+    @Consumes(MediaType.APPLICATION_JSON)
     public void register(RegisterRequest registerBody) {
         authService.register(registerBody.getEmail(), registerBody.getPassword());
     }
 
     @POST
     @Path("/login")
+    @Consumes(MediaType.APPLICATION_JSON)
     public Response login(LoginRequest loginBody) {
         String jwtToken = authService.login(loginBody.getEmail(), loginBody.getPassword());
 

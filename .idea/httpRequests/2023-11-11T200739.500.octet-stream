@@ -1,0 +1,1 @@
+No result found for query [SELECT u FROM UserEntity u WHERE u.email = :email]
