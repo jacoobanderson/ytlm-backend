@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.49">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>803</IntrospectionStateNumber>
+      <IntrospectionStateNumber>813</IntrospectionStateNumber>
       <ServerVersion>16.0</ServerVersion>
       <StartupTime>1697900999</StartupTime>
       <TimeZones>true ACDT
@@ -806,7 +806,7 @@ false Zulu
 13452||10|C|G
 13452||-9223372036854775808|U|G
 13452||10|U|G</Grants>
-      <IntrospectionStateNumber>803</IntrospectionStateNumber>
+      <IntrospectionStateNumber>813</IntrospectionStateNumber>
       <ObjectId>16583</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4714,9 +4714,9 @@ false Zulu
       <OwnerName>postgres</OwnerName>
     </schema>
     <schema id="263" parent="3" name="learn">
-      <IntrospectionStateNumber>803</IntrospectionStateNumber>
-      <IntrospectionTimestamp>2023-11-11.18:15:39.782</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-11-11.17:15:40</LocalIntrospectionTimestamp>
+      <IntrospectionStateNumber>813</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2023-11-11.18:37:54.531</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-11-11.17:37:54</LocalIntrospectionTimestamp>
       <ObjectId>16584</ObjectId>
       <StateNumber>771</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -5913,9 +5913,9 @@ false Zulu
     <schema id="265" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>803</IntrospectionStateNumber>
-      <IntrospectionTimestamp>2023-11-11.18:15:39.782</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-11-11.17:15:40</LocalIntrospectionTimestamp>
+      <IntrospectionStateNumber>813</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2023-11-11.18:37:54.531</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-11-11.17:37:54</LocalIntrospectionTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -5936,19 +5936,33 @@ false Zulu
       <StateNumber>790</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="268" parent="263" name="qa_pairs">
+    <sequence id="268" parent="263" name="users_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16659</ObjectId>
+      <SequenceIdentity>1(1)</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>812</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="269" parent="263" name="qa_pairs">
       <ObjectId>16635</ObjectId>
       <StateNumber>791</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="269" parent="263" name="sections">
+    <table id="270" parent="263" name="sections">
       <ObjectId>16628</ObjectId>
       <StateNumber>791</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="270" parent="268" name="pair_id">
+    <table id="271" parent="263" name="users">
+      <ObjectId>16660</ObjectId>
+      <StateNumber>812</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="272" parent="269" name="pair_id">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;learn.qa_pairs_pair_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -5957,27 +5971,27 @@ false Zulu
       <SequenceId>16634</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="271" parent="268" name="section_id">
+    <column id="273" parent="269" name="section_id">
       <DasType>integer|0s</DasType>
       <Position>2</Position>
       <StateNumber>791</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="272" parent="268" name="question">
+    <column id="274" parent="269" name="question">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>791</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="273" parent="268" name="answer">
+    <column id="275" parent="269" name="answer">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>791</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <foreign-key id="274" parent="268" name="qa_pairs_section_id_fkey">
+    <foreign-key id="276" parent="269" name="qa_pairs_section_id_fkey">
       <ColNames>section_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16643</ObjectId>
@@ -5986,7 +6000,7 @@ false Zulu
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16628</RefTableId>
     </foreign-key>
-    <index id="275" parent="268" name="qa_pairs_pkey">
+    <index id="277" parent="269" name="qa_pairs_pkey">
       <ColNames>pair_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16641</ObjectId>
@@ -5995,14 +6009,14 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="276" parent="268" name="qa_pairs_pkey">
+    <key id="278" parent="269" name="qa_pairs_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16642</ObjectId>
       <Primary>1</Primary>
       <StateNumber>791</StateNumber>
       <UnderlyingIndexId>16641</UnderlyingIndexId>
     </key>
-    <column id="277" parent="269" name="section_id">
+    <column id="279" parent="270" name="section_id">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;learn.sections_section_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -6011,14 +6025,14 @@ false Zulu
       <SequenceId>16627</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="278" parent="269" name="url">
+    <column id="280" parent="270" name="url">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>790</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="279" parent="269" name="sections_pkey">
+    <index id="281" parent="270" name="sections_pkey">
       <ColNames>section_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16632</ObjectId>
@@ -6027,12 +6041,68 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="280" parent="269" name="sections_pkey">
+    <key id="282" parent="270" name="sections_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16633</ObjectId>
       <Primary>1</Primary>
       <StateNumber>790</StateNumber>
       <UnderlyingIndexId>16632</UnderlyingIndexId>
+    </key>
+    <column id="283" parent="271" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;learn.users_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>812</StateNumber>
+      <SequenceId>16659</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="284" parent="271" name="email">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>812</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="285" parent="271" name="password">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>812</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="286" parent="271" name="users_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16666</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>812</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="287" parent="271" name="users_email_key">
+      <ColNames>email</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16668</ObjectId>
+      <StateNumber>812</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="288" parent="271" name="users_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16667</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>812</StateNumber>
+      <UnderlyingIndexId>16666</UnderlyingIndexId>
+    </key>
+    <key id="289" parent="271" name="users_email_key">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16669</ObjectId>
+      <StateNumber>812</StateNumber>
+      <UnderlyingIndexId>16668</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>
